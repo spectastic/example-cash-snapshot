@@ -31,7 +31,7 @@ npx @spectastic/cli validate 'specs/**/*.html'
 ```
 
 The settlement cycle is read *per trade date*, so one codebase is correct on both sides of the
-28 May 2024 cutover — the edition pins (`KB-001@2017-09-05` / `KB-001@2024-05-28`) sit right in
+28 May 2024 cutover — the edition pins (`@2017-09-05` (T+2) / `@2024-05-28` (T+1)) sit right in
 the `standard_cycle` branch.
 
 ## License
