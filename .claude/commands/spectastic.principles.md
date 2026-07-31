@@ -14,7 +14,7 @@ model: inherit
 
 # /spectastic.principles
 
-You are drafting (or amending) the **project principles** as a single-file HTML artifact in the spectastic design system. The principles establish the non-negotiable rules that bind every downstream `spec.html`, `plan.html`, and `tasks.html`.
+You are drafting (or amending) the **project principles** as a single-file HTML artifact in the spectastic design system. The principles establish the non-negotiable rules that bind every downstream `spec.html`, `design.html`, and `tasks.html`.
 
 ## What spectastic is
 

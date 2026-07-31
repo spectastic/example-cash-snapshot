@@ -155,7 +155,7 @@ This is the **pre-propose rejection path**. For the **post-propose** path (an au
 
 ## After writing
 
-**Single-item mode:** report the path (`specs/<spec-id>/triage-log.html`), the new T-ID, and whether any cascade is needed (`/spectastic.plan` re-run, `/spectastic.tasks` re-run, etc.).
+**Single-item mode:** report the path (`specs/<spec-id>/triage-log.html`), the new T-ID, and whether any cascade is needed (`/spectastic.design` re-run, `/spectastic.tasks` re-run, etc.).
 
 **List-intake mode:** report `./inbox.html`, a numbered list of the items written, and how many landed in each routing exit. Suggest `/spectastic.implement` next if any `just-do` items were added. Example:
 
