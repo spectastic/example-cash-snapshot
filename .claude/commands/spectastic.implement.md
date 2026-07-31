@@ -67,7 +67,7 @@ Flags can appear in any order in `$ARGUMENTS`. A non-flag token (`T-NNN`, `I-NNN
 
 4. **Load context.** Read:
    - `specs/<spec-id>/spec.html` — the feature's requirements and success criteria (or principles section)
-   - `specs/<spec-id>/plan.html` — the technical approach for this feature
+   - `specs/<spec-id>/design.html` — the technical approach for this feature
    - The principles document at `./principles.html` if present
    - Any source files the task explicitly names
 
@@ -80,10 +80,10 @@ Flags can appear in any order in `$ARGUMENTS`. A non-flag token (`T-NNN`, `I-NNN
    - **Inbox `just-do` card:** add `data-status="done"` to the `<spec-triage>` element. Do not remove the card or move it out of inbox.html — it stays as history (faded with a DONE pill). Other cards stay untouched.
 
 8. **Last-tick status transition (per REQ-LIFECYCLE-004 + REQ-LIFECYCLE-005 of the meta-spec).** After **every** tick taken while the spec's status is `Draft`, count the remaining unchecked `<input type="checkbox">` elements in the tasks.html file. **Skip this step entirely** when the spec's status is already past `Draft` (Accepted / In Review / Superseded / Deprecated / Blocked) — a re-tick or hotfix re-tick on an already-flipped artifact does not re-fire the bundled flip prompt. If status *is* `Draft` and the remaining-unchecked count is exactly zero, surface a Draft → Accepted bundled flip prompt:
-   - Display an explicit confirmation prompt naming the spec, the proposed transition (`Draft` → `Accepted`), the trigger ("zero remaining unchecked checkboxes"), and the **three sibling artifacts that will flip together** (spec.html, plan.html, tasks.html — the spec slice's bundle, per REQ-LIFECYCLE-005). Use AskUserQuestion or an equivalent explicit-confirmation gesture — never an inline "do you want to" sentence the user can scroll past.
+   - Display an explicit confirmation prompt naming the spec, the proposed transition (`Draft` → `Accepted`), the trigger ("zero remaining unchecked checkboxes"), and the **three sibling artifacts that will flip together** (spec.html, design.html, tasks.html — the spec slice's bundle, per REQ-LIFECYCLE-005). Use AskUserQuestion or an equivalent explicit-confirmation gesture — never an inline "do you want to" sentence the user can scroll past.
    - The prompt **MUST** remind the author to verify the integration tests covering the spec's Success Criteria pass before confirming. This is the test-pass discipline, absorbed into the confirmation gesture: the author's "yes" attests that tests are green.
    - The command **MUST NOT** auto-flip status. No confirmation, no flip.
-   - On confirmation, edit the `<spec-status value="…">` pill in **all three** sibling artifacts (`spec.html`, `plan.html`, `tasks.html`) from `draft` to `accepted`, AND append a matching one-line `<spec-changelog>` entry to **each** naming the old state, new state, date, and triggering condition. Example entry: `Status flipped Draft → Accepted on 16 Jun 2026 — zero remaining unchecked tasks; tests verified passing per author confirmation. Sibling bundle (REQ-LIFECYCLE-005).` All three writes are part of the single confirmation gesture — partial bundle flips are forbidden.
+   - On confirmation, edit the `<spec-status value="…">` pill in **all three** sibling artifacts (`spec.html`, `design.html`, `tasks.html`) from `draft` to `accepted`, AND append a matching one-line `<spec-changelog>` entry to **each** naming the old state, new state, date, and triggering condition. Example entry: `Status flipped Draft → Accepted on 16 Jun 2026 — zero remaining unchecked tasks; tests verified passing per author confirmation. Sibling bundle (REQ-LIFECYCLE-005).` All three writes are part of the single confirmation gesture — partial bundle flips are forbidden.
    - If the user declines (or interrupts the prompt), leave all three statuses as-is and report. The flip can be performed manually later; the requirement is on the prompt, not on the outcome.
    - This step is also **skipped** when the artifact has no tasks.html (principles, meta-spec, triage log, inbox — handled by the tasks-less-artifact clause of REQ-LIFECYCLE-004; author affirms separately, no bundle).
 

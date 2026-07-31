@@ -18,7 +18,7 @@ and the corpus's retained editions are that history.
 | --- | --- |
 | `impl/` | The engine — a std-only **Rust** crate: exact `i64` cents, an edition-correct business-day settlement calendar, and the IBOR/ABOR snapshot. |
 | `knowledge/finance-settlement/` | The corpus: 5 KB documents (settlement cycle, FX/PvP, IBOR/ABOR/PBOR books, cash-snapshot semantics) + corporate actions (adjacent, uncited), and a **retained superseded** T+2 edition under `references/superseded/`. |
-| `specs/001-cash-snapshot/` | The spec, plan, tasks, and the **applied** change proposal (`changes/archive/2024-05-28-usd-t1-settlement/`) that moved settlement T+2 → T+1. |
+| `specs/001-cash-snapshot/` | The spec, design, tasks, and the **applied** change proposal (`changes/archive/2024-05-28-usd-t1-settlement/`) that moved settlement T+2 → T+1. |
 
 ## Run it
 

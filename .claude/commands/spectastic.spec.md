@@ -1,5 +1,5 @@
 ---
-description: Write a feature specification — what to build, for whom, and how success is measured. Use when starting a new feature, specifying requirements and success criteria, or capturing what a feature must do before any planning — not project-wide rules (/spectastic.principles), the how (/spectastic.plan), or throwaway learning (/spectastic.explore).
+description: Write a feature specification — what to build, for whom, and how success is measured. Use when starting a new feature, specifying requirements and success criteria, or capturing what a feature must do before any planning — not project-wide rules (/spectastic.principles), the how (/spectastic.design), or throwaway learning (/spectastic.explore).
 argument-hint: <feature name or one-line description>
 triggers:
   - "write a spec for a feature"
@@ -94,7 +94,7 @@ User input (from `$ARGUMENTS`): a feature name or one-line description.
 
 ## After writing
 
-Report the path, count of requirements, and propose `/spectastic.plan` next.
+Report the path, count of requirements, and propose `/spectastic.design` next.
 
 ## Optional: CLI dispatch
 

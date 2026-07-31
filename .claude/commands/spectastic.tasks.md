@@ -1,5 +1,5 @@
 ---
-description: Derive the task breakdown from a spec + plan — an ordered, parallelizable, test-first task list. Use when turning a spec and plan into the executable checklist that /spectastic.implement drains — not the architecture (/spectastic.plan) or the execution itself (/spectastic.implement).
+description: Derive the task breakdown from a spec + plan — an ordered, parallelizable, test-first task list. Use when turning a spec and plan into the executable checklist that /spectastic.implement drains — not the architecture (/spectastic.design) or the execution itself (/spectastic.implement).
 argument-hint: [spec-id, defaults to most recent]
 triggers:
   - "break the spec into tasks"
@@ -22,7 +22,7 @@ User input (from `$ARGUMENTS`): a Spec ID such as `001-auth-service`, or empty (
 
 ## Procedure
 
-1. **Locate inputs**: `specs/<spec-id>/spec.html` and `specs/<spec-id>/plan.html`. Read both end-to-end before generating tasks. You need every requirement, success criterion, and decision in working memory.
+1. **Locate inputs**: `specs/<spec-id>/spec.html` and `specs/<spec-id>/design.html`. Read both end-to-end before generating tasks. You need every requirement, success criterion, and decision in working memory.
 
 2. **Copy** `templates/tasks.html` to `specs/<spec-id>/tasks.html`.
 
